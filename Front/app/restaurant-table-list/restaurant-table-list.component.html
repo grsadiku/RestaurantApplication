@@ -1,0 +1,85 @@
+
+<div class="row" style="width: 100%;">
+ 
+    <div class="col-sm-3 form-group">
+      <label for="Location">Seats</label>
+      <input
+        type="text"
+        id="Size"
+        class="form-control"
+        name="Size"
+        [(ngModel)]="size"
+        
+      >
+    </div>
+    <div class="col-sm-3 form-group">
+      <label for="Location">Date From</label>
+      <input
+        type="datetime"
+        id="DateFrom"
+        class="form-control"
+        name="DateFrom"
+        ngModel
+        [(ngModel)]="dateFrom"
+      >
+    </div>
+    <div class="col-sm-3 form-group">
+     <label for="Location">Date To</label>
+      <input
+        type="datetime"
+        id="DateTo"
+        class="form-control"
+        name="DateTo"
+        [(ngModel)]="dateTo"
+      > 
+      
+    </div>
+    <div class="col-sm-3 form-group">
+      <button class="btn btn-primary mt-3" type="button" (click)="SearchClicked()">Search</button>
+    </div>
+</div>
+
+<!-- <div class="row mt-3">
+    <div class="col-xs-12">
+     
+      <table class="table table-striped">
+        <thead>
+          <tr>
+            <th>
+              Location
+            </th>
+            <th>
+              Total Seats
+            </th>
+          </tr>
+        </thead>
+          <tr *ngFor="let item of tablesToShow">
+              <td>{{ item.location }}</td>
+              <td>{{ item.totalSeats }}</td>
+          </tr>
+      </table>
+    </div>
+  </div> -->
+  
+
+  <div class="row mt-3">
+    <div class="col-xs-12">
+     
+      <table class="table table-striped">
+        <thead>
+          <tr>
+            <th>
+              Location
+            </th>
+            <th>
+              Total Seats
+            </th>
+          </tr>
+        </thead>
+          <tr *ngFor="let item of (tablesList | async)?.searchedTables let i = index">
+              <td>{{ item.location }}</td>
+              <td>{{ item.totalSeats }}</td>
+          </tr>
+      </table>
+    </div>
+  </div>
