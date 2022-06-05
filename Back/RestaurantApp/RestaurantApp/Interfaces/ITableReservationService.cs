@@ -10,7 +10,7 @@ namespace RestaurantApp.Interfaces
     {
         IEnumerable<TableReservationViewModel> GetTableReservations();
         bool AddTableReservation(NewTableReservationViewModel _);
-        bool CheckTableReservation(CheckTableReservationViewModel _);
+        bool CheckTableReservation(NewTableReservationViewModel _);
         bool EditProduct(NewTableReservationViewModel _, int id);
         TableReservationViewModel GetTableReservation(int id);
         IEnumerable<TableReservationViewModel> GetTableReservationsByTable(int idTable);

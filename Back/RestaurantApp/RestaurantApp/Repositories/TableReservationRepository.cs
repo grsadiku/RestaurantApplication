@@ -13,6 +13,12 @@ namespace RestaurantApp.Repositories
 
         public TableReservationRepository(RestContext context) : base(context)
         {
+            _context = context;
+        }
+
+        public bool CheckIfReservationValid(int idTable, DateTime reservationDate)
+        {
+            return !_context.TableReservations.Any(x => x.IDRestaurantTable == idTable &&  x.ReservationDate == reservationDate);
         }
 
         public TableReservation GetByTableID(int id)

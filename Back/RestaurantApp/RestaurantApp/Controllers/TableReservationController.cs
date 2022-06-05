@@ -53,11 +53,17 @@ namespace RestaurantApp.Controllers
 
             try
             {
-                var addedTable = _reservationtableService.AddTableReservation(reservation);
-                if (addedTable)
-                    return Ok(new { StatusCode = 0 });
-                else
-                    return Ok(new { StatusCode = 2, ErrorMessage = "Insertion failed!" });
+                var test = _reservationtableService.GetTableReservations();
+                var checkTableReservation = _reservationtableService.CheckTableReservation(reservation);
+                if(checkTableReservation)
+                {
+                    var addedTable = _reservationtableService.AddTableReservation(reservation);
+                    if (addedTable)
+                        return Ok(new { StatusCode = 0 });
+                    else
+                        return Ok(new { StatusCode = 2, ErrorMessage = "Insertion failed!" });
+                }
+                return Ok(new { StatusCode = 1, ErrorMessage = "The table is reserved" });
             }
             catch (Exception e)
             {

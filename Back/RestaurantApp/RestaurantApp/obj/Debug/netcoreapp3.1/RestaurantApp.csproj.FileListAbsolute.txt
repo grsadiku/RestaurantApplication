@@ -260,7 +260,6 @@ D:\Restaurant Project\Back\RestaurantApp\RestaurantApp\bin\Debug\netcoreapp3.1\r
 D:\Restaurant Project\Back\RestaurantApp\RestaurantApp\bin\Debug\netcoreapp3.1\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.pdb
 D:\Restaurant Project\Back\RestaurantApp\RestaurantApp\bin\Debug\netcoreapp3.1\runtimes\win\lib\netstandard2.0\System.Runtime.Caching.dll
 D:\Restaurant Project\Back\RestaurantApp\RestaurantApp\bin\Debug\netcoreapp3.1\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
-D:\Restaurant Project\Back\RestaurantApp\RestaurantApp\obj\Debug\netcoreapp3.1\RestaurantApp.csproj.AssemblyReference.cache
 D:\Restaurant Project\Back\RestaurantApp\RestaurantApp\obj\Debug\netcoreapp3.1\RestaurantApp.GeneratedMSBuildEditorConfig.editorconfig
 D:\Restaurant Project\Back\RestaurantApp\RestaurantApp\obj\Debug\netcoreapp3.1\RestaurantApp.AssemblyInfoInputs.cache
 D:\Restaurant Project\Back\RestaurantApp\RestaurantApp\obj\Debug\netcoreapp3.1\RestaurantApp.AssemblyInfo.cs
@@ -274,3 +273,4 @@ D:\Restaurant Project\Back\RestaurantApp\RestaurantApp\obj\Debug\netcoreapp3.1\R
 D:\Restaurant Project\Back\RestaurantApp\RestaurantApp\obj\Debug\netcoreapp3.1\RestaurantApp.dll
 D:\Restaurant Project\Back\RestaurantApp\RestaurantApp\obj\Debug\netcoreapp3.1\RestaurantApp.pdb
 D:\Restaurant Project\Back\RestaurantApp\RestaurantApp\obj\Debug\netcoreapp3.1\RestaurantApp.genruntimeconfig.cache
+D:\Restaurant Project\Back\RestaurantApp\RestaurantApp\obj\Debug\netcoreapp3.1\RestaurantApp.csproj.AssemblyReference.cache

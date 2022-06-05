@@ -23,7 +23,11 @@ namespace RestaurantApp.Services
 
         public bool AddTableReservation(NewTableReservationViewModel _)
         {
-            var data = _mapper.Map<TableReservation>(_);
+            var data = new TableReservation
+            {
+                IDRestaurantTable = _.IDTable,
+                ReservationDate = _.Date
+            };
 
             try
             {
@@ -37,13 +41,9 @@ namespace RestaurantApp.Services
             return _reservationRepository.SaveChanges() > 0;
         }
 
-        public bool CheckTableReservation(CheckTableReservationViewModel _)
+        public bool CheckTableReservation(NewTableReservationViewModel _)
         {
-            var data = _reservationRepository.GetByTableID(_.ID);
-            if (data.ReservationDate == _.Date)
-                return false;
-
-            return true;
+            return _reservationRepository.CheckIfReservationValid(_.IDTable, _.Date ?? DateTime.Now);
         }
 
         public bool EditProduct(NewTableReservationViewModel _, int id)

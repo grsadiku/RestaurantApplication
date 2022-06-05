@@ -10,5 +10,6 @@ namespace RestaurantApp.Interfaces
     {
         TableReservation GetByTableID(int id);
         IEnumerable<TableReservation> GetReservationsByTableID(int idTable);
+        bool CheckIfReservationValid(int idTable, DateTime reservationDate);
     }
 }
